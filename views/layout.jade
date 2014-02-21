@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+  head
+    include includes/head
+
+  body
+    .navbar.navbar-inverse.navbar-fixed-top
+            .navbar-inner
+                
+    div.container
+        block content
+    | !{cachify_js('/components/jquery/jquery.min.js')}
+    | !{cachify_js('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')}
+    | !{cachify_js('/js/site.js')}
+    block scripts

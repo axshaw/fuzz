@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.row
+        div.col-md-6.col-md-offset-3.panel.panel-default.centerContent.text-center
+            h1.margin-base-vertical fuzz
+            form(action='/signup',method='post')
+                p.input-group
+                    span.input-group-addon 
+                        span.icon-envelope
+                    input(name='email',type='text').form-control.input-lg
+                p.help-block
+                    small We won't send you spam. Unsubscribe at any time.
+                p
+                    button(type='submit').btn.btn-success.btn-lg Keep me posted
