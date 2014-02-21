@@ -26,3 +26,8 @@ html {
 .introText{
     color:white;
 }
+
+.darkInput {
+    background-color:#3C3737;
+    border:#3C3737;
+}
