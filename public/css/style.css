@@ -1,8 +1,9 @@
 body {
     padding-top: 20px;
     font-size: 16px;
-    font-family: "Open Sans",serif;
+   font-family: 'Gafata', sans-serif;
     background: transparent;
+    color:white;
 }
 
 .margin-base-vertical {
@@ -10,7 +11,7 @@ body {
 }
 
 html {
-    background: url(../images/bg.png) no-repeat center center fixed; 
+    background: url(../images/bgc.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,4 +20,9 @@ html {
 
 .centerContent	{
 	margin-top:70px;
+    background-color:rgba(0,0,0,0.5);
+}
+
+.introText{
+    color:white;
 }

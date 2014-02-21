@@ -3,13 +3,20 @@ extends layout
 block content
     div.row
         div.col-md-6.col-md-offset-3.panel.panel-default.centerContent.text-center
-            h1.margin-base-vertical fuzz
+            img(src='images/beard.png')
+            h1 Fuzz.ly
+            p.help-block.introText
+                 p.lead
+                    The The chief scientists at fuzz's top secret laboratory have perfected the formula that makes our fuzzly beard oil so unique.
+                 p 
+                    We We will soon be launching our products, and would love to introduce ourselves to the world<br><br> If you would like to be amoung the first to find out about fuzz's selection of beard care products. Please leave us an email address we can contact you on below.  To say thanks, we will send you an exclusive, limited edition, pre-lauch, uper-duper, special offer code.
+
             form(action='/signup',method='post')
                 p.input-group
                     span.input-group-addon 
                         span.icon-envelope
                     input(name='email',type='text').form-control.input-lg
                 p.help-block
-                    small We won't send you spam. Unsubscribe at any time.
+                    small We won't send you spam, Unsubscribe at any time.
                 p
                     button(type='submit').btn.btn-success.btn-lg Keep me posted
