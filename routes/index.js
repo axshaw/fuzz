@@ -5,4 +5,8 @@ module.exports = function(app) {
         res.render('index', { title: 'fuzz.ly' })
     })
 
+    app.post('/signup', function(req, res)	{
+    	res.render('post',{title: 'fuzz.ly' })
+    })
+
 }
