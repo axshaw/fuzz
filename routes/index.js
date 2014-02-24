@@ -8,16 +8,16 @@ module.exports = function(app) {
     app.post('/signup', function(req, res)	{
     	
     	var pg = require('pg');
-        
+
+        var email = req.body.name;
 		pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-		  client.query('INSERT INTO fuzzly SET emailAddress="'+email+'"', function(err, result) {
+		  client.query('INSERT INTO fuzzly VALUES (emailAddress="'+email+'")', function(err, result) {
 		    done();
 		    if(err) return console.error(err);
 		    console.log(result.rows);
 		  });
 		});
     	
-    	var email = req.body.name;
     	res.render('post',{title: email })
     })
 
