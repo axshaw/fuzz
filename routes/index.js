@@ -9,7 +9,7 @@ module.exports = function(app) {
     	
     	var pg = require('pg');
 
-        var email = req.body.name;
+        var email = req.body.email;
 		pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 		  client.query('INSERT INTO interest (emailaddress) VALUES ("'+email+'")', function(err, result) {
 		    done();
