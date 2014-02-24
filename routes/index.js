@@ -11,7 +11,7 @@ module.exports = function(app) {
 
         var email = req.body.name;
 		pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-		  client.query('INSERT INTO interest (emailaddress,date_added) VALUES ("'+email+'",now)', function(err, result) {
+		  client.query('INSERT INTO interest (emailaddress) VALUES ("'+email+'")', function(err, result) {
 		    done();
 		    if(err) return console.error(err);
 		    console.log(result.rows);
