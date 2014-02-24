@@ -3,6 +3,7 @@ var express = require('express')
     , app = express()
     , nconf = require('nconf')
     , winston = require('winston')
+    , pg = require('pg')
 
 // Logging
 var logger = new (winston.Logger)({ transports: [ new (winston.transports.Console)({colorize:true}) ] })
