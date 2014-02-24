@@ -14,7 +14,10 @@ module.exports = function(app) {
             console.log('INSERT INTO interest (emailaddress) VALUES ("'+email+'")');
 		  client.query('INSERT INTO interest (emailaddress) VALUES ("'+email+'")', function(err, result) {
 		    done();
-		    if(err) return console.error(err);
+		    if(err) {return console.error(err)
+            }else   {
+                console.log("no write error");
+            };
 		    console.log(result.rows);
 		  });
 		});
