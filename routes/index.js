@@ -6,7 +6,18 @@ module.exports = function(app) {
     })
 
     app.post('/signup', function(req, res)	{
-    	res.render('post',{title: 'fuzz.ly' })
+    	/*
+    	var pg = require('pg');
+		pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+		  client.query('SELECT * FROM your_table', function(err, result) {
+		    done();
+		    if(err) return console.error(err);
+		    console.log(result.rows);
+		  });
+		});
+    	*/
+    	var email = req.body.name;
+    	res.render('post',{title: email })
     })
 
 }

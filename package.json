@@ -28,6 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "pg": "2.x",
     "connect-cachify": "*",
     "winston": "*",
     "winston-request-logger": "*",
