@@ -2,7 +2,11 @@ module.exports = function(app) {
 
     // Home/main
     app.get('/', function(req, res) {
-        res.render('index', { title: 'fuzz.ly' })
+        if(!req.query.id)    {
+            res.render('index', { title: 'fuzz.ly', cssFile: 'style.css', query: req.query.id })
+        }else   {
+            res.render('index', { title: 'fuzz.ly', cssFile: 'style2.css', query: req.query.id })
+        }
     })
 
     app.post('/signup', function(req, res)	{
@@ -20,8 +24,11 @@ module.exports = function(app) {
 		    console.log(result.rows);
 		  });
 		});
-    	
-    	res.render('post',{title: email })
+    	if(!req.body.id)    {
+            res.render('post', { title: 'fuzz.ly', cssFile: 'style.css', query: req.query.id })
+        }else   {
+            res.render('post', { title: 'fuzz.ly', cssFile: 'style2.css', query: req.query.id })
+        }
     })
 
 }

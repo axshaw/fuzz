@@ -1,0 +1,33 @@
+body {
+    padding-top: 20px;
+    font-size: 16px;
+   font-family: 'Gafata', sans-serif;
+    background: transparent;
+    color:white;
+}
+
+.margin-base-vertical {
+	margin: 40px 0;
+}
+
+html {
+    background: url(../images/bgTrees.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.centerContent	{
+	margin-top:70px;
+    background-color:rgba(0,0,0,0.5);
+}
+
+.introText{
+    color:white;
+}
+
+.darkInput {
+    background-color:#3C3737;
+    border:#3C3737;
+}
