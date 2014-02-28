@@ -25,9 +25,9 @@ module.exports = function(app) {
 		  });
 		});
     	if(!req.body.id)    {
-            res.render('post', { title: 'fuzz.ly', cssFile: 'style.css', query: req.query.id })
+            res.render('post', { title: 'fuzz.ly', cssFile: 'style.css', query: req.body.id })
         }else   {
-            res.render('post', { title: 'fuzz.ly', cssFile: 'style2.css', query: req.query.id })
+            res.render('post', { title: 'fuzz.ly', cssFile: 'style2.css', query: req.body.id })
         }
     })
 
