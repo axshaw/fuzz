@@ -9,6 +9,14 @@ module.exports = function(app) {
         }
     })
 
+    app.get('/lumberjack', function(req, res) {
+        if(!req.query.id)    {
+            res.render('lumberjack', { title: 'fuzz.ly', cssFile: 'style.css', query: req.query.id })
+        }else   {
+            res.render('lumberjack', { title: 'fuzz.ly', cssFile: 'style2.css', query: req.query.id })
+        }
+    })
+
     app.post('/signup', function(req, res)	{
     	
     	var pg = require('pg');
